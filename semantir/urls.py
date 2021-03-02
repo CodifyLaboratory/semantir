@@ -18,6 +18,7 @@ from django.urls import path, include
 from core import views
 from core.models import User
 from rest_framework import routers
+from .yasg import urlpatterns as doc_urls
 
 router = routers.DefaultRouter()
 
@@ -38,3 +39,4 @@ urlpatterns = [
 ]
 
 urlpatterns += router.urls
+urlpatterns += doc_urls
